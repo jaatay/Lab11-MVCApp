@@ -7,12 +7,16 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace MVCApp
 {
 	public class HomeController: Controller
 	{
+		
+			
+			return View();
 		
 	}
 }
