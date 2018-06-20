@@ -1,13 +1,11 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
+using MVCApp;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
+
 
 
 namespace MVCApp
@@ -15,8 +13,14 @@ namespace MVCApp
 	public class HomeController: Controller
 	{
 		
+			public IActionResult Index()
+		{
+			TimePerson newList = new TimePerson();
+			newList.GetPersons(1990, 2000);
 			
-			return View();
+			return View(newList);
+		}
+			
 		
 	}
 }
