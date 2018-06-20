@@ -23,7 +23,7 @@ namespace MVCApp
 		public string Category { get; set; }
 		public string Context { get; set; }
 
-		public List<TimePerson>GetPersons(int begYear, int endYear)
+		public static List<TimePerson>GetPersons(int begYear, int endYear)
 		{
 			List<TimePerson> people = new List<TimePerson>();
 			string path = Environment.CurrentDirectory;

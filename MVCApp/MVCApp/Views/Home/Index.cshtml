@@ -1,7 +1,36 @@
 ﻿@model  List<MVCApp.TimePerson>
 
+
+<form method="post">
+	<label for="begYear">Beginning Year</label>
+	<input maxLength="4" begYear="begYear"/>
+
+	<label for="endYear">End Year</label>
+	<input maxLength="4" endyear="endYear"/>
+
+	<button type="submit">Send Data</button>
+	</form>
+
 @foreach(var item in Model)
 {
-	<p>TimePerson.Name</p>
+	<th></th>
+		<tr>
+			<td>
+				@item.Name
+			</td>
+			<td>@item.Year</td>
+			<td>@item.Honor </td>
+			<td>@item.Name</td>
+			<td>@item.Country </td>
+			<td>@item.Birth_Year </td>
+			<td>@item.DeathYear </td>
+			<td>@item.Title </td>
+			<td>@item.Category </td>
+			<td>@item.Context</td>
+		</tr>
+		<br />
 
+		
+									
 }
+

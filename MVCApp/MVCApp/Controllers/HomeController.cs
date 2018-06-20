@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using MVCApp;
@@ -13,14 +12,30 @@ namespace MVCApp
 	public class HomeController: Controller
 	{
 		
-			public IActionResult Index()
+		[HttpGet]
+		public IActionResult Index()
 		{
-			TimePerson newList = new TimePerson();
-			newList.GetPersons(1990, 2000);
 			
-			return View(newList);
+			return View();
 		}
+
+		[HttpPost]
+		public IActionResult Index(int begYear, int endYear)
+		{
 			
+
+			return RedirectToAction("Results" , new { begYear, endYear });
+		}
+
+		public IActionResult Results(int begYear, int endYear)
+		{
+			List<TimePerson> person = new List<TimePerson>();
+			person = TimePerson.GetPersons(begYear, endYear);
+			
+
+			return View(person);
+		}
 		
+
 	}
 }
