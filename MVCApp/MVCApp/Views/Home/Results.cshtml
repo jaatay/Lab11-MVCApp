@@ -1,0 +1,22 @@
+﻿@model  List<MVCApp.Models.TimePerson>
+
+<link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+
+<table>
+	@foreach (var item in Model)
+	{
+
+		<tr>
+			<td>Year: @item.Year</td>
+			<td>Honor: @item.Honor </td>
+			<td>Name: @item.Name</td>
+			<td>Country: @item.Country </td>
+			<td>Birth Year: @item.Birth_Year </td>
+			<td>Death Year: @item.DeathYear </td>
+			<td>Title: @item.Title </td>
+			<td>Category: @item.Category </td>
+			<td>Context: @item.Context</td>
+		</tr>
+
+	}
+</table>

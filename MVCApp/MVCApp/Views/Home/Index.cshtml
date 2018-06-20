@@ -1,36 +1,20 @@
-﻿@model  List<MVCApp.TimePerson>
+﻿@model  List<MVCApp.Models.TimePerson>
 
+<link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
+
+<h1>Time Person of the Year!</h1>
 
 <form method="post">
-	<label for="begYear">Beginning Year</label>
-	<input maxLength="4" begYear="begYear"/>
+	<label for="inputBegYear">Beginning Year</label>
+	<input maxLength="4" name="inputBegYear"/>
 
-	<label for="endYear">End Year</label>
-	<input maxLength="4" endyear="endYear"/>
+	<label for="inputEndYear">End Year</label>
+	<input maxLength="4" name="inputEndYear"/>
 
 	<button type="submit">Send Data</button>
 	</form>
 
-@foreach(var item in Model)
-{
-	<th></th>
-		<tr>
-			<td>
-				@item.Name
-			</td>
-			<td>@item.Year</td>
-			<td>@item.Honor </td>
-			<td>@item.Name</td>
-			<td>@item.Country </td>
-			<td>@item.Birth_Year </td>
-			<td>@item.DeathYear </td>
-			<td>@item.Title </td>
-			<td>@item.Category </td>
-			<td>@item.Context</td>
-		</tr>
-		<br />
 
 		
-									
-}
+								
 

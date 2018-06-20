@@ -12,6 +12,7 @@ namespace MVCApp
 {
     public class Program
     {
+		//entrance to program
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
